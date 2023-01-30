@@ -1,0 +1,57 @@
+# Install zsh:
+# sudo apt install zsh
+# chsh -s $(which zsh
+
+# install Oh My Zsh: https://ohmyz.sh/#install
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install spaceship prompt: https://github.com/spaceship-prompt/spaceship-prompt
+# git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+# ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+# install https://github.com/zsh-users/zsh-syntax-highlighting:  https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
+# ADJUST THE CONFIG
+
+ZSH_THEME="spaceship"
+
+# SPACESHIP SETUP #
+# Adds a newline character before each prompt line
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+# Make the prompt span across two lines
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+
+# Show prefixes before prompt sections or not
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
+
+# Show time (set to true for enabling)
+SPACESHIP_TIME_SHOW=true
+# Prefix before time section
+SPACESHIP_TIME_PREFIX=""
+
+# Number of folders of cwd to show in prompt, 0 to show all
+SPACESHIP_DIR_TRUNC=0
+# While in git repo, show only root directory and folders inside it
+SPACESHIP_DIR_TRUNC_REPO=false
+
+# ...
+
+plugins=(
+  git
+  zsh-syntax-highlighting
+)
+
+export PYTHONIOENCODING=utf-8
+export LC_ALL=en_US.UTF-8
+
+# CUDA  
+export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+
+export VISUAL=vim
+export EDITOR=vim
+
+
+
