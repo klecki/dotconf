@@ -1,0 +1,12 @@
+apt-get install -y zip wget yasm curl git build-essential autoconf  libtool autogen automake python3-clang libtool-bin
+
+
+# git lfs 
+# Full installation instructions:
+# https://git-lfs.com/
+
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+apt-get install -y git-lfs # this is the missing step!!!!
+git lfs install
+
+
