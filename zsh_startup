@@ -54,4 +54,9 @@ export VISUAL=vim
 export EDITOR=vim
 
 
+# clone DALI_extra (you need to activate git lfs first)
+export DALI_EXTRA_PATH=<path to DALI_extra>
+
+# For packages installed via `pip install --user` to work:
+export PATH=$PATH:/home/klecki/.local/bin
 
